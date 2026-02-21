@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* Custom utility colors/styles */
+:root {
+  --bbl-blue: #1e3a8a;
+  --bbl-gold: #f59e0b;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
+}
+
+html,
+body {
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  background-color: #050B14;
+  color: white;
+  @apply antialiased;
+}
+
+/* Custom form styles that look premium natively */
+.form-input-premium {
+  @apply w-full px-5 py-4 border border-white/10 rounded-2xl bg-white/5 focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500/50 transition-all placeholder-gray-500 shadow-sm backdrop-blur-md font-medium;
+  color: white !important;
+  color-scheme: dark;
+}
+
+/* Ensure data entered in textarea/inputs is always visible */
+.form-input-premium:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Ensuring checkmarks and labels for roles/formats are bright */
+input[type="checkbox"] {
+  @apply accent-yellow-500;
+}
+
+
+/* Fix for dropdown options visibility across ALL browsers and mobile devices */
+select.form-input-premium option {
+  background-color: #0a1526 !important;
+  color: white !important;
+}
+
+
+/* Custom arrow for the dropdown since we removed appearance */
+select.form-input-premium {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.5rem;
+  padding-right: 2.5rem;
+}
+
+
+
+.form-label-premium {
+  @apply block text-sm font-bold text-gray-400 mb-2 tracking-widest uppercase;
+}
+
+.button-premium {
+  @apply w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-2xl text-xl font-black text-blue-950 bg-gradient-to-r from-yellow-400 to-yellow-600 transition-all transform hover:-translate-y-1 active:scale-[0.98] disabled:opacity-50 disabled:cursor-wait;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
